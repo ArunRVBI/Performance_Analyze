@@ -64,6 +64,10 @@ view: web_page {
     sql: ${TABLE}.WP_REC_END_DATE ;;
   }
 
+  dimension: Web_Rec_Start{
+    type: string
+    sql: ${TABLE}.WP_REC_START_DATE ;;
+    }
   dimension_group: wp_rec_start {
     type: time
     timeframes: [
