@@ -88,8 +88,8 @@ view: web_sales {
     sql: ${TABLE}.WS_NET_PAID_INC_TAX ;;
   }
 
-  dimension: ws_net_profit {
-    type: number
+  measure: ws_net_profit {
+    type: sum
     sql: ${TABLE}.WS_NET_PROFIT ;;
   }
 
@@ -103,6 +103,10 @@ view: web_sales {
     sql: ${TABLE}.WS_PROMO_SK ;;
   }
 
+  measure: ws_quantity_Avg {
+    type: average
+    sql: ${TABLE}.WS_QUANTITY ;;
+  }
   dimension: ws_quantity {
     type: number
     sql: ${TABLE}.WS_QUANTITY ;;
