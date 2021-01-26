@@ -57,8 +57,8 @@ view: web_returns {
     sql: ${TABLE}.WR_REFUNDED_HDEMO_SK ;;
   }
 
-  dimension: wr_return_amt {
-    type: number
+  measure: wr_return_amt {
+    type: sum
     sql: ${TABLE}.WR_RETURN_AMT ;;
   }
 
@@ -112,8 +112,8 @@ view: web_returns {
     sql: ${TABLE}.WR_RETURNING_HDEMO_SK ;;
   }
 
-  dimension: wr_reversed_charge {
-    type: number
+  measure: wr_reversed_charge {
+    type: sum
     sql: ${TABLE}.WR_REVERSED_CHARGE ;;
   }
 
