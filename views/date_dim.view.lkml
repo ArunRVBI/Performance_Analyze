@@ -148,7 +148,7 @@ view: date_dim {
   }
 
   dimension: dyear {
-    type: number
+    type: string
     sql: ${TABLE}.D_YEAR ;;
   }
 
