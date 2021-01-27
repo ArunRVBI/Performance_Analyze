@@ -116,8 +116,8 @@ view: store_sales {
     sql: ${TABLE}.SS_TICKET_NUMBER ;;
   }
 
-  dimension: ss_wholesale_cost {
-    type: number
+  measure: ss_wholesale_cost {
+    type: sum
     sql: ${TABLE}.SS_WHOLESALE_COST ;;
   }
 
