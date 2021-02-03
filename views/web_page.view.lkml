@@ -64,10 +64,7 @@ view: web_page {
     sql: ${TABLE}.WP_REC_END_DATE ;;
   }
 
-  dimension: Web_Rec_Start{
-    type: string
-    sql: substring(${TABLE}.WP_REC_START_DATE,1,4) ;;
-    }
+
 
   dimension_group: wp_rec_start {
     type: time
@@ -99,6 +96,15 @@ view: web_page {
     sql: ${TABLE}.WP_WEB_PAGE_SK ;;
   }
 
+  #custom dimention
+  dimension: Web_Rec_Start{
+    type: string
+    sql: substring(${TABLE}.WP_REC_START_DATE,1,4) ;;
+  }
+  dimension: Web_Rec_Start_Month_Year{
+    type: string
+    sql: TO_CHAR(DATE_TRUNC('month', web_page.WP_REC_START_DATE ), 'YYYY-MM');;
+  }
   measure: count {
     type: count
     drill_fields: [wp_web_page_id]
