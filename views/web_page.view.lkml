@@ -103,7 +103,7 @@ view: web_page {
   }
   dimension: Web_Rec_Start_Month_Year{
     type: string
-    sql: TO_CHAR(DATE_TRUNC('month', web_page.WP_REC_START_DATE ), 'YYYY-MM');;
+    sql: concat(TO_CHAR(DATE_PART('YEAR',web_page.WP_REC_START_DATE)),'-', TO_CHAR(DATE_PART('MONTH',web_page.WP_REC_START_DATE)));;
   }
   measure: count {
     type: count
