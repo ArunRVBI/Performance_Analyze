@@ -153,8 +153,8 @@ view: date_dim {
   }
 
   dimension: dMonth_Year {
-    type: string
-    sql:TO_CHAR(((DATE_PART('YEAR',"DATE_DIM"."D_DATE") * 100) + DATE_PART('MONTH',"DATE_DIM"."D_DATE"))) ;;
+    type: number
+    sql:((DATE_PART('YEAR',"DATE_DIM"."D_DATE") * 100) + DATE_PART('MONTH',"DATE_DIM"."D_DATE")) ;;
   }
 
   measure: count {
