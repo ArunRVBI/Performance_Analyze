@@ -103,7 +103,7 @@ view: web_page {
   }
   dimension: Web_Rec_Start_Month_Year{
     type: number
-    sql:  ((DATE_PART('YEAR',web_page.WP_REC_START_DATE) * 100) + DATE_PART('MONTH',web_page.WP_REC_START_DATE));;
+    sql:  TO_CHAR(((DATE_PART('YEAR',web_page.WP_REC_START_DATE) * 100) + DATE_PART('MONTH',web_page.WP_REC_START_DATE)));;
 
 
   }
