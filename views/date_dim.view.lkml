@@ -159,6 +159,7 @@ view: date_dim {
 dimension: F_monthYear {
   type: string
   sql: ${dMonth_Year} ;;
+  suggest_persist_for: "5 minutes"
 }
   measure: count {
     type: count

@@ -84,6 +84,7 @@ view: web_page {
   dimension: wp_type {
     type: string
     sql: ${TABLE}.WP_TYPE ;;
+    suggest_persist_for: "5 minutes"
   }
 
   dimension: wp_url {
@@ -108,6 +109,7 @@ view: web_page {
   dimension: F_WebRecStart_MonthYear {
     type: string
     sql: ${Web_Rec_Start_Month_Year} ;;
+    suggest_persist_for: "5 minutes"
   }
   measure: count {
     type: count
